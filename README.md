@@ -17,13 +17,6 @@ El curso incluye temas fundamentales como los elementos básicos de diseño, acc
 - **UD4) Multimedia en la web**: Preparación e integración de archivos multimedia en sitios web.
 - **UD5) Elementos interactivos de la web**: Creación e implementación de componentes interactivos.
 
-## Temporalización
-
-El curso cuenta con una carga lectiva de **126 horas** distribuidas en **6 horas semanales**:
-- **Lunes**: 1 hora
-- **Martes**: 2 horas
-- **Miércoles**: 2 horas
-- **Viernes**: 1 hora
 
 ## Recursos recomendados
 

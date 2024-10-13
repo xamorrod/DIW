@@ -57,40 +57,6 @@ body {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-.carrusel {
-  position: relative;
-  max-width: 900px;
-  margin: auto;
-  overflow: hidden;
-  display: flex;
-}
-
-.carrusel-img {
-  width: 33.33%;
-  transition: transform 0.5s ease;
-}
-
-.carrusel-img img {
-  width: 100%;
-  height: auto;
-}
-
-#carruselButton {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  transform: translateY(-50%);
-  pointer-events: none;
-  background-color: rgba(255, 255, 255, 0);
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  pointer-events: auto;
-  transition: background-color 0.3s;
-}
-
 #estiloFooter {
   font-family: Agrandir, sans-serif;
   font-size: 14px;

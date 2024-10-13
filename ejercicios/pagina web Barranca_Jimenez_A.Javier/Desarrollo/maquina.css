@@ -53,42 +53,39 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.botonNav button:hover {
-  background-color: rgba(255, 255, 255, 0.8);
-}
-
-.carrusel {
-  position: relative;
-  max-width: 900px;
-  margin: auto;
-  overflow: hidden;
+.informacionMaquina {
   display: flex;
-}
-
-.carrusel-img {
-  width: 33.33%;
-  transition: transform 0.5s ease;
-}
-
-.carrusel-img img {
+  flex-direction: row;
+  font-family: Agrandir, sans-serif;
+  font-size: 14px;
+  justify-content: space-between;
   width: 100%;
+}
+
+.textoTitulo {
+  font-size: 16px;
+}
+.textoMaquina {
+  width: 50%;
+  text-align: left;
+  padding: 2%;
+  line-height: 3;
+}
+
+.imagenMaquina {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagenMaquina img {
+  max-width: 100%;
   height: auto;
 }
 
-#carruselButton {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  transform: translateY(-50%);
-  pointer-events: none;
-  background-color: rgba(255, 255, 255, 0);
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  pointer-events: auto;
-  transition: background-color 0.3s;
+.botonNav button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 #estiloFooter {
@@ -146,5 +143,20 @@ body {
   .botonNav button {
     margin-right: 0;
     margin-bottom: 5px;
+  }
+
+  .informacionMaquina {
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  .textoMaquina {
+    width: 100%; 
+    text-align: center; 
+  }
+
+  .imagenMaquina {
+    width: 100%; 
+    justify-content: center; 
   }
 }

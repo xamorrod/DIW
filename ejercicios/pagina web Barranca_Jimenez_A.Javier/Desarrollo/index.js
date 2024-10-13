@@ -1,30 +1,28 @@
-document.addEventListener("DOMContentLoaded", function () {
-  let indice = 0;
-  mostrarImagen(indice);
+let currentIndex = 0;
+const images = document.querySelectorAll(".carrusel-img");
+const totalImages = images.length;
 
-  document.querySelector(".prev").addEventListener("click", function () {
-    cambiarImagen(-1);
+function showImages() {
+  images.forEach((img, index) => {
+    img.style.transform = `translateX(${(index - currentIndex) * 60}%)`;
   });
+}
 
-  document.querySelector(".next").addEventListener("click", function () {
-    cambiarImagen(1);
-  });
+function changeImage(direction) {
+  currentIndex = (currentIndex + direction + totalImages) % totalImages;
+  showImages();
+}
 
-  function cambiarImagen(n) {
-    mostrarImagen((indice += n));
-  }
-
-  function mostrarImagen(n) {
-    const imagenes = document.getElementsByClassName("carrusel-img");
-    if (n >= imagenes.length) {
-      indice = 0;
-    }
-    if (n < 0) {
-      indice = imagenes.length - 1;
-    }
-    for (let i = 0; i < imagenes.length; i++) {
-      imagenes[i].style.display = "none";
-    }
-    imagenes[indice].style.display = "block";
-  }
+document.querySelector(".prev").addEventListener("click", () => {
+  changeImage(-1);
 });
+
+document.querySelector(".next").addEventListener("click", () => {
+  changeImage(1);
+});
+
+showImages();
+
+setInterval(() => {
+  changeImage(1);
+}, 3000);

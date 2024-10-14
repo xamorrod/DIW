@@ -42,7 +42,8 @@ body {
   display: flex;
 }
 
-.botonNav button {
+.botonNav button,
+.botonSesion button {
   font-size: 14px;
   margin-right: 10px;
   padding: 10px 15px;
@@ -53,8 +54,11 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.botonNav button:hover {
+.botonNav button:hover,
+.botonSesion button:hover {
+  background: linear-gradient(135deg, #06bccd, #ff6f61);
   background-color: rgba(255, 255, 255, 0.8);
+  transition: background-color 0.3s ease 0.2s;
 }
 
 .carrusel {

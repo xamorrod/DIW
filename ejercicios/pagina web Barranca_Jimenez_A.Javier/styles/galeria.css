@@ -127,6 +127,10 @@ body {
   flex: 1;
 }
 
+.accesoTienda {
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   body {
     margin-top: 50%;

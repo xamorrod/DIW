@@ -76,6 +76,9 @@ body {
   overflow: hidden;
   position: relative;
 }
+.accesoTienda {
+  cursor: pointer;
+}
 
 .image-container img {
   width: 100%;

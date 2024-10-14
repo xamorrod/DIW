@@ -41,6 +41,9 @@ body {
 .botonNav {
   display: flex;
 }
+.accesoTienda {
+  cursor: pointer;
+}
 
 .botonNav button,
 .botonSesion button {

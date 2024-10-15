@@ -14,7 +14,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  padding: 15px 30px; /* Espacio lateral adicional para un mejor margen */
   min-height: 60px;
   position: fixed;
   top: 0;
@@ -32,10 +32,23 @@ body {
   max-width: 300px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-.nav {
-  color: #000000;
+.tituloNav {
+  font-family: "Agrandir", sans-serif;
+  font-style: italic;
+  font-size: 24px;
+  color: white;
+  margin-left: 20px;
+  flex-grow: 1;
+  text-align: center;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.tituloNav:hover {
+  color: #ff6f61;
+  transform: scale(1.1);
 }
 
 .botonNav {
@@ -57,7 +70,6 @@ body {
 .botonNav button:hover,
 .botonSesion button:hover {
   background: linear-gradient(135deg, #06bccd, #ff6f61);
-  background-color: rgba(255, 255, 255, 0.8);
   transition: background-color 0.3s ease 0.2s;
 }
 
@@ -65,12 +77,12 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  position: relative;
   gap: 10px;
   padding: 20px;
 }
 
 .image-container {
-  flex: 1 0 21%;
   max-width: 25%;
   height: 200px;
   overflow: hidden;

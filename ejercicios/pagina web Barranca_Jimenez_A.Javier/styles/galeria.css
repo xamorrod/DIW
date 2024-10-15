@@ -71,7 +71,21 @@ body {
   width: 70%;
   margin: 0 auto;
 }
+.tituloNav {
+  font-family: "Agrandir", sans-serif;
+  font-style: italic;
+  font-size: 24px;
+  color: white;
+  margin-left: 20px;
+  flex-grow: 1;
+  text-align: center;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
 
+.tituloNav:hover {
+  color: #ff6f61;
+  transform: scale(1.1);
+}
 .image-container {
   overflow: hidden;
   position: relative;

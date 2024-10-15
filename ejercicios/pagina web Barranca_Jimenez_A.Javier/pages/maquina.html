@@ -7,6 +7,10 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=More+Sugar&display=swap"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Agrandir:ital,wght@1,400&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Mismodelosparavinil</title>
     <link rel="stylesheet" href="/styles/maquina.css" />
@@ -15,14 +19,15 @@
   <body>
     <nav id="estiloNav">
       <img src="./../images/logo/logo.jpg" class="logo" />
+      <h1 class="tituloNav">Mismodelosparavinil</h1>
       <div class="botonNav">
         <button onclick="location.href='./../index.html'">Home</button>
         <button onclick="location.href='./galeria.html'">Galería</button>
         <button onclick="location.href='./tienda.html'">Tienda</button>
       </div>
       <div class="botonSesion">
-        <button>Log in</button>
-        <button>Sign in</button>
+        <button onclick="alerta()">Log in</button>
+        <button onclick="alerta()">Sign in</button>
       </div>
     </nav>
 
@@ -73,5 +78,6 @@
         <p>Comprar</p>
       </div>
     </footer>
+    <script src="../scripts/alertLogSign.js"></script>
   </body>
 </html>

@@ -1,0 +1,44 @@
+*{
+    font-family: Roboto;
+    background-color: #797777;
+}
+
+body{
+    font-size: 20px;
+}
+.content{
+    flex:1;
+}
+.bienvenida{
+    height: 3%;
+    background-color: #FFF;
+    text-align: center;
+}
+.section{
+    margin-top: 5px;
+    text-align: center;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:2px;
+    margin-bottom: 10px;
+    width: 90%;
+}
+
+.descripcion{
+    font-size: 12px;
+    margin-top:1%;
+    padding: 2px;
+}
+
+.fotos:hover{
+    transform:scale(1.1)
+    
+}
+
+.footer{
+    position:fixed;
+    bottom: 0;
+    background-color: #222;
+    color: #FFF;
+}
+

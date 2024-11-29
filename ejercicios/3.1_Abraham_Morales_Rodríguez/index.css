@@ -1,44 +1,58 @@
-*{
-    font-family: Roboto;
-    background-color: #797777;
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #797777; 
+  font-size: 20px;
+  margin: 0;  
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;  
 }
 
-body{
-    font-size: 20px;
-}
-.content{
-    flex:1;
-}
-.bienvenida{
-    height: 3%;
-    background-color: #FFF;
-    text-align: center;
-}
-.section{
-    margin-top: 5px;
-    text-align: center;
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    gap:2px;
-    margin-bottom: 10px;
-    width: 90%;
+
+.content {
+  flex: 1;
+  padding: 20px;
 }
 
-.descripcion{
-    font-size: 12px;
-    margin-top:1%;
-    padding: 2px;
+
+.bienvenida {
+  background-color: #fff;
+  text-align: center;
+  line-height: 50px;  
 }
 
-.fotos:hover{
-    transform:scale(1.1)
-    
+
+.section {
+  margin-top: 20px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  
+  gap: 10px;
+  width: 90%;
+  margin: 20px auto;  
 }
 
-.footer{
-    position:fixed;
-    bottom: 0;
-    background-color: #222;
-    color: #FFF;
+
+.descripcion {
+  font-size: 20px;
+  padding: 10px;
+  color:#fff
 }
 
+
+.fotos:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out; 
+}
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%; 
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0; 
+}

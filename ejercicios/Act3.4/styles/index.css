@@ -1,0 +1,35 @@
+* {
+  background-image: url("/media/fondo.gif");
+  font-family: "Press Start 2P", cursive;
+  
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  color: antiquewhite;
+  font-size: 30px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 40px;
+  cursor: pointer;
+  color: beige;
+  text-transform: uppercase;
+  transition: transform 0.3s, background-color 0.3s;
+  border-radius: 12%;
+  margin-top: 20%;
+  
+}
+
+button:hover {
+  transform: scale(1.05);
+  transform:translateY(+5)
+}
+
+button:active {
+  transform: scale(1);
+}

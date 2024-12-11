@@ -1,0 +1,56 @@
+* {
+  font-family: "Press Start 2P", cursive;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.loader {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: loaderFadeOut 3s ease-in-out forwards;
+}
+
+
+
+@keyframes loaderFadeOut {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.content {
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+  transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+body.loaded .content {
+  opacity: 1;
+  visibility: visible;
+}
+
+body.loaded .loader {
+  display: none;
+}

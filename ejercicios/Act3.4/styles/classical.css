@@ -7,6 +7,8 @@
 body {
   height: 100vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   overflow: hidden;
 }
@@ -38,8 +40,7 @@ body {
 .content {
   opacity: 0;
   visibility: hidden;
-  font-size: 20px;
-  margin-top:50px;
+  text-align: center;
   transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
 }
 
@@ -98,12 +99,4 @@ nav ul a {
 
 nav ul a:hover {
   color: #ffa500;
-}
-
-.main-info{
-  margin-top:5%;
-  margin-left: 3%;
-  font-size: 18px;
-  width: 80%;
-
 }

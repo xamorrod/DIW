@@ -3,30 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore a curated selection of timeless kaleidoscope patterns."
+    />
+    <meta name="author" content="Kaleidoscope Designs Team" />
     <link rel="stylesheet" href="/styles/classical.css" />
     <title>kaleidoscope</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="./../media/ico.png" type="image/png" />
   </head>
-  <div class="loader">
-    <img src="/media/transition.gif" alt="Cargando..." class="loader-img" />
-  </div>
   <body>
+    <div class="loader">
+      <img src="/media/loader.gif" alt="Cargando..." class="loader-img" />
+    </div>
     <header>
       <nav>
-        <img src="../media/logo.gif" alt="Logo" class="logo" />
+        <a href="./../index.html">
+          <img src="../media/logo.gif" alt="Logo" class="logo" />
+        </a>
         <ul>
           <li><a href="./main.html">Main page</a></li>
           <li><a href="./classical.html">Classical designs</a></li>
-          <li><a href="./original.html">Original designs</a></li>
         </ul>
       </nav>
     </header>
     <main class="content">
-      
+      <section>
+        <h1>Welcome to Classical Designs</h1>
+        <p>Explore a curated selection of timeless kaleidoscope patterns.</p>
+      </section>
+      <div class="show-designs">
+        <img src="./../media/classic1.gif" />
+        <img src="./../media/classic2.gif" />
+        <img src="./../media/classsic3.gif" />
+      </div>
     </main>
+    <footer>
+      <p>© 2024 Kaleidoscope Designs. All rights reserved.</p>
+    </footer>
     <script>
       window.addEventListener("load", function () {
         setTimeout(function () {

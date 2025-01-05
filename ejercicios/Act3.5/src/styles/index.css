@@ -1,0 +1,113 @@
+body {
+  min-height: 100vh; /* Cambiado de height a min-height para permitir contenido adicional */
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header,
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffa600;
+  z-index: 1000;
+  font-size: 1.8vw;
+  display: flex;
+  align-items: center;
+}
+
+nav img.logo {
+  height: 4vw;
+  width: 4vw;
+  margin-left: 1vw;
+}
+
+nav a {
+  margin-left: 2vw;
+  text-decoration: none;
+  color: #000;
+}
+
+.introduction {
+  display: flex;
+  justify-content: center;
+  margin-top: 5vw;
+}
+
+section {
+  margin-top: 2vw;
+  display: flex;
+  height: 30vw;
+  width: 60vw;
+}
+
+section img {
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: 0.6s ease;
+}
+
+section img:hover {
+  cursor: crosshair;
+  width: 400px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+.featured-books {
+  margin: 5vw auto;
+  text-align: center;
+}
+
+.featured-books h2 {
+  font-size: 2.5vw;
+  color: #333;
+  margin-bottom: 2vw;
+}
+
+.book-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.book-list article {
+  width: 20vw;
+  text-align: center;
+}
+
+.book-list img {
+  width: 15vw;
+  height: 20vw;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+footer {
+  background-color: #ffa600;
+  text-align: center;
+  margin-top: 2vw;
+  padding: 2vw 0;
+}
+
+footer p {
+  font-size: 1.5vw;
+  color: #fff;
+}
+
+footer .social-media a {
+  margin: 0 1vw;
+  font-size: 1.2vw;
+  text-decoration: none;
+  color: #fff;
+}
+
+footer .social-media a:hover {
+  text-decoration: underline;
+}

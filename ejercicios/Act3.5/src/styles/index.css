@@ -1,5 +1,5 @@
 body {
-  min-height: 100vh; /* Cambiado de height a min-height para permitir contenido adicional */
+  min-height: 100vh; 
   display: flex;
   flex-direction: column;
   background-size: cover;

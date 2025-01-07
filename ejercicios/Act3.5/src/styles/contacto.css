@@ -1,13 +1,13 @@
 body {
-  min-height: 100vh; /* Cambiado de height a min-height para permitir contenido adicional */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   background-size: cover;
   background-position: center;
   font-family: Arial, Helvetica, sans-serif;
+  margin-top: 5vw;
 }
 
-header,
 nav {
   position: fixed;
   top: 0;
@@ -18,20 +18,130 @@ nav {
   font-size: 1.8vw;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 0 1vw;
 }
 
 nav img.logo {
   height: 4vw;
   width: 4vw;
-  margin-left: 1vw;
+  margin-left: 0.5vw;
 }
 
 nav a {
   margin-left: 2vw;
   text-decoration: none;
+  font-weight: bold;
+
   color: #000;
 }
 
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 1vw;
+}
+
+.search-input {
+  height: 2.5vw;
+  width: 15vw;
+  font-size: 1vw;
+  padding: 0 0.5vw;
+  border: 1px solid #000;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.search-button {
+  height: 2.7vw;
+  font-size: 1.5vw;
+  padding: 0 0.8vw;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  margin-right: 2vw;
+}
+
+.search-button:hover {
+  background-color: #444;
+}
+h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.contact-info {
+  text-align: left;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+}
+
+.contact-info p {
+  font-size: 1.2rem;
+}
+
+.contact-form {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.contact-form label {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form button {
+  padding: 1rem;
+  background-color: #ffa600;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #e89700;
+}
+
+.google-maps {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.google-maps iframe {
+  width: 100%;
+  height: 450px;
+  border-radius: 8px;
+}
 footer {
   background-color: #ffa600;
   text-align: center;

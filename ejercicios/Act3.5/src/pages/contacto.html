@@ -9,18 +9,55 @@
   <body>
     <header>
       <nav>
-        <a href="./../index.html">
+        <a href="./../../index.html">
           <img
-            src="./src/media/logo.png"
+            src="./../media/logo.png"
             alt="Logo de Librería Carlos"
             class="logo"
           />
         </a>
-        <a href="./src/pages/nosotros.html">Nosotros</a>
-        <a href="./src/pages/contacto.html">Contacto</a>
+        <a href="./contacto.html">Nosotros</a>
+        <a href="./nosotros.html">Contacto</a>
+        <div class="search-container">
+          <input type="text" placeholder="Buscar..." class="search-input" />
+          <button class="search-button">🔍</button>
+        </div>
       </nav>
     </header>
+    <div class="contact-info">
+      <h2>Información de Contacto</h2>
+      <p>Dirección: Calle de la Librería, 123, Madrid, España</p>
+      <p>Teléfono: +34 123 456 789</p>
+      <p>Email: contacto@libreriacarlos.com</p>
+    </div>
 
+    <div class="contact-form">
+      <h2>Formulario de Contacto</h2>
+      <form action="" method="POST">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+
+    <div class="google-maps">
+      <h2>Visítanos</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3038.1088504579353!2d-3.7073987853409514!3d40.41677567933349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42285eb2b39f17%3A0xd711d5e29b4c5000!2sCalle%20de%20la%20Librer%C3%ADa%2C%20123%2C%20Madrid%2C%20Espa%C3%B1a!5e0!3m2!1ses!2ses!4v1644387365145!5m2!1ses!2ses"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </div>
     <footer>
       <p>&copy; 2025 Librería Carlos. Todos los derechos reservados.</p>
       <div class="social-media">

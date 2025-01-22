@@ -1,15 +1,16 @@
-import { Box, Button, Text } from '@chakra-ui/react'
-import Demo from './components/ui/demo'
+import { Box, Button, Text } from "@chakra-ui/react";
+import { BrowserRouter as Router } from "react-router-dom"; 
+import AppRoutes from "./routes/AppRoutes";
+
+import Navbar from "./components/Navbar";
 
 function App() {
-
   return (
-    <Box textAlign={'center'} p={5} backgroundColor={'gray'}>
-      <Text fontSize={'2xl'}>Hello, World!</Text>
-      <Button colorScheme={'purple'} _hover={'black'}>Click me!</Button>
-      <Demo />
-    </Box>
-  )
+    <Router>
+      <Navbar />
+      <AppRoutes />
+    </Router>
+  );
 }
 
-export default App
+export default App;

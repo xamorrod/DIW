@@ -10,7 +10,7 @@ const Navbar = () => {
   // Hook de traducción
   const { t } = useTranslation();  
   return (
-    <Box boxShadow="md" p={2.5} bg="blue.500" color="white" borderRadius={20}>
+    <Box boxShadow="md" p={2.5} bg="brand.500" color="brand.letter" borderRadius={20}>
       <Flex alignItems="center" justifyContent="space-between">
         <Flex as="nav" gap={6} alignItems={"center"} >
           <Box
@@ -44,7 +44,7 @@ const Navbar = () => {
         <Button
           onClick={toggleColorMode}
           bg="transparent"
-          _hover={{ bg: "blue.400" }}
+          color={colorMode === "dark" ? "brand.100" : "brand.500"}
         >
           {colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
         </Button>

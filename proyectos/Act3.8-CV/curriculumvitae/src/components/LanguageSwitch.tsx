@@ -9,7 +9,7 @@ const LanguageSwitch: React.FC = () => {
     };
 
     return (
-        <Button onClick={toggleLanguage}  colorScheme="blackAlpha"  size={"sm"}>
+        <Button onClick={toggleLanguage}  color="brand.100" bg="brand.500"  size={"sm"}>
             {i18n.language === "es" ? "English" : "Español"}
         </Button>
     );

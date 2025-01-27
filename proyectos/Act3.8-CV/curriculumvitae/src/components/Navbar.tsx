@@ -1,21 +1,25 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import RoutePaths from "../routes/RoutePaths";
 import { Button, useColorMode, Box, Flex } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+import LanguageSwitch from "./LanguageSwitch";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
+  // Hook de traducción
+  const { t } = useTranslation();  
   return (
-    <Box boxShadow="md" p={4} bg="blue.500" color="white">
+    <Box boxShadow="md" p={2.5} bg="blue.500" color="white" borderRadius={20}>
       <Flex alignItems="center" justifyContent="space-between">
-        <Flex as="nav" gap={5}>
+        <Flex as="nav" gap={6} alignItems={"center"} >
           <Box
             _hover={{
               transition: "all 0.3s ease",
               borderBottom: "2px solid white ",
             }}
           >
-            <Link to={RoutePaths.Home}>Home</Link>
+            <NavLink to={RoutePaths.Home}>{t('Home')}</NavLink>
           </Box>
           <Box
             _hover={{
@@ -23,7 +27,7 @@ const Navbar = () => {
               borderBottom: "2px solid white",
             }}
           >
-            <Link to={RoutePaths.About}>About</Link>
+            <NavLink to={RoutePaths.About}>{t('About')}</NavLink>
           </Box>
 
           <Box
@@ -32,8 +36,9 @@ const Navbar = () => {
               borderBottom: "2px solid white",
             }}
           >
-            <Link to={RoutePaths.Contact}>Contact</Link>
+            <NavLink to={RoutePaths.Contact}>{t('Contact')}</NavLink>
           </Box>
+          <LanguageSwitch />
         </Flex>
 
         <Button
@@ -46,6 +51,7 @@ const Navbar = () => {
       </Flex>
     </Box>
   );
+
 };
 
 export default Navbar;

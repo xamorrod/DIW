@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import RoutePaths from "../routes/RoutePaths";
-import { Button, useColorMode, Box, Flex, Text } from "@chakra-ui/react";
+import { Button, useColorMode, Box, Flex } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 const Navbar = () => {
@@ -41,7 +41,7 @@ const Navbar = () => {
           bg="transparent"
           _hover={{ bg: "blue.400" }}
         >
-          {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+          {colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
         </Button>
       </Flex>
     </Box>

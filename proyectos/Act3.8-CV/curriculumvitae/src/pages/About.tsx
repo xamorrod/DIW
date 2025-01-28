@@ -1,5 +1,14 @@
-const About : React.FC= () => {
-  return <h1>Acerca de nosotros</h1>;
+import IntroSection from "../components/Intro/IntroSection";
+
+const About: React.FC = () => {
+  return (
+    <div>
+      <IntroSection />
+      
+    </div>
+
+
+  );
 };
 
 export default About;

@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Box, Button, FormControl, FormLabel, Input, Textarea, FormHelperText, useToast } from "@chakra-ui/react";
+import emailjs from 'emailjs-com';
 
 const ContactForm: React.FC = () => {
     const [formData, setFormData] = useState({
         from_name: "",
-        to_name: "Cliente",
+        to_name: "estimado usuario",
         message: "",
         email: "",
     });
@@ -25,24 +26,45 @@ const ContactForm: React.FC = () => {
         e.preventDefault();
         setSending(true);
 
-        // Aquí iría la lógica de envío del correo (por ejemplo, con emailjs)
-        setTimeout(() => {
-            setSent(true);
-            toast({
-                title: "Mensaje Enviado",
-                description: "Tu mensaje ha sido enviado correctamente.",
-                status: "success",
-                duration: 5000,
-                isClosable: true,
+        emailjs
+            .send(
+                "service_i2gaioo",
+                "template_xj5nmd7",
+                formData,
+                "dQWwUPTTaWi9j13x9"
+            )
+            .then(
+                (response) => {
+                    console.log("Correo enviado exitosamente:", response);
+                    setSent(true);
+                    toast({
+                        title: "Mensaje enviado",
+                        description: "Tu mensaje ha sido enviado correctamente.",
+                        status: "success",
+                        duration: 5000,
+                        isClosable: true,
+                    });
+                },
+                (error) => {
+                    console.error("Error al enviar el correo:", error);
+                    toast({
+                        title: "Error",
+                        description: "Hubo un error al enviar tu mensaje. Inténtalo de nuevo.",
+                        status: "error",
+                        duration: 5000,
+                        isClosable: true,
+                    });
+                }
+            )
+            .finally(() => {
+                setSending(false);
             });
-            setSending(false);
-        }, 2000); // Simulando envío de mensaje
     };
 
     return (
         <Box p={6} boxShadow="lg" borderRadius="lg" maxWidth="500px" mx="auto" bg="brand.50" mt={8}>
             <Box textAlign="center" mb={6}>
-                <h1 style={{ fontSize: "1.5rem", fontWeight: "600", color:"#222"}}>Formulario de Contacto</h1>
+                <h1 style={{ fontSize: "1.5rem", fontWeight: "600", color: "#222" }}>Formulario de Contacto</h1>
             </Box>
             {!sent ? (
                 <form onSubmit={handleSubmit}>
@@ -55,6 +77,7 @@ const ContactForm: React.FC = () => {
                             onChange={handleInputChange}
                             borderColor="brand.500"
                             _focus={{ borderColor: "brand.500" }}
+                            color="brand.600"
                         />
                     </FormControl>
 
@@ -67,6 +90,8 @@ const ContactForm: React.FC = () => {
                             onChange={handleInputChange}
                             borderColor="gray.300"
                             _focus={{ borderColor: "brand.500" }}
+                            color="brand.600"
+
                         />
                         <FormHelperText color={"brand.600"}>Nos pondremos en contacto contigo pronto.</FormHelperText>
                     </FormControl>
@@ -80,6 +105,8 @@ const ContactForm: React.FC = () => {
                             borderColor="gray.300"
                             _focus={{ borderColor: "brand.500" }}
                             resize="vertical"
+                            color="brand.600"
+
                         />
                     </FormControl>
 

@@ -5,11 +5,11 @@ const LanguageSwitch: React.FC = () => {
     const { i18n } = useTranslation();
     const toggleLanguage = () => {
         const newLang = i18n.language === 'es' ? 'en' : 'es';
-        i18n.changeLanguage(newLang); 
+        i18n.changeLanguage(newLang);
     };
 
     return (
-        <Button onClick={toggleLanguage}  color="brand.100" bg="brand.500"  size={"sm"}>
+        <Button onClick={toggleLanguage} size={"lg"} bg="transparent">
             {i18n.language === "es" ? "English" : "Español"}
         </Button>
     );

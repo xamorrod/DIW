@@ -9,7 +9,7 @@ const IntroSection: React.FC = () => {
     const MotionBox = motion(Box);
     const MotionFlex = motion(Flex);
     const ANIMATION_DURATION = 0.5;
-    const color = 'brand.400';
+    const color = 'brand.300';
     const { t } = useTranslation();
     
 

@@ -4,58 +4,56 @@ import { Button, useColorMode, Box, Flex } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import LanguageSwitch from "./LanguageSwitch";
 import { useTranslation } from "react-i18next";
+import { FaHome, FaUser, FaCode, FaEnvelope } from "react-icons/fa"; // Iconos más formales
 
-const Navbar:React.FC = () => {
+const Navbar: React.FC = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const { t } = useTranslation();
 
   return (
     <Box
       boxShadow="md"
-      p={2.5}
-      bg="brand.500"
-      color="brand.letter"
+      p={3}
+      bg="rgba(39, 54, 77, 0.7)"
       borderRadius={45}
-      width={["90%", "80%", "70%", "50%"]}
+      width="fit-content"
+      maxWidth="1200px"
       mx="auto"
-      my={1}
-      opacity={0.8}
-      alignContent={"center"}
-      position={"sticky"}
-      top={0}
+      mb={4}
+      alignContent="center"
+      position="fixed"
+      bottom={0}
+      left={0}
+      right={0}
       zIndex={1}
     >
       <Flex
         alignItems="center"
-        justifyContent={["space-between", "center"]}
+        justifyContent="space-between"
         flexDirection={["column", "row"]}
+        px={6}
       >
-        <Flex as="nav" gap={6} alignItems={"center"} flexDirection={["column", "row"]}>
-          <Box
-            _hover={{
-              transition: "all 0.3s ease",
-              borderBottom: "2px solid white ",
-            }}
-          >
-            <NavLink to={RoutePaths.Home}>{t('Home')}</NavLink>
-          </Box>
-          <Box
-            _hover={{
-              transition: "all 0.3s ease",
-              borderBottom: "2px solid white",
-            }}
-          >
-            <NavLink to={RoutePaths.About}>{t('About')}</NavLink>
-          </Box>
+        <Flex as="nav" gap={8} alignItems="center" flexDirection={["column", "row"]}>
+          <NavLink
+            to={RoutePaths.Home}>
 
-          <Box
-            _hover={{
-              transition: "all 0.3s ease",
-              borderBottom: "2px solid white",
-            }}
-          >
-            <NavLink to={RoutePaths.Contact}>{t('Contact')}</NavLink>
-          </Box>
+            <FaHome size={35} />
+          </NavLink>
+
+          <NavLink
+            to={RoutePaths.About}>
+            <FaUser size={35} />
+          </NavLink>
+
+          <NavLink
+            to={RoutePaths.Projects}>
+            <FaCode size={35} />
+          </NavLink>
+
+          <NavLink
+            to={RoutePaths.Contact}>
+            <FaEnvelope size={35} />
+          </NavLink>
         </Flex>
 
         <Box display="flex" gap={4} alignItems="center" flexDirection={["column", "row"]}>
@@ -63,7 +61,8 @@ const Navbar:React.FC = () => {
           <Button
             onClick={toggleColorMode}
             bg="transparent"
-            color={colorMode === "dark" ? "brand.100" : "brand.100"}
+            color="brand.100"
+            size={["md", "lg"]}
           >
             {colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
           </Button>

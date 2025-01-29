@@ -1,15 +1,23 @@
 import { extendTheme } from "@chakra-ui/react";
+import { mode } from "@chakra-ui/theme-tools";
 
 const theme = extendTheme({
   styles: {
-
-
+    global: (props: any) => ({
+      body: {
+        backgroundColor: mode("#467180", "#27364d")(props),
+        backgroundImage: 'url("https://www.transparenttextures.com/patterns/climpek.png")',
+        backgroundRepeat: "repeat",
+        backgroundSize: "auto",
+        color: "brand.letter",
+      },
+    }),
   },
   fonts: {
     heading: "Roboto",
     body: "Roboto",
   },
-  // Adding colors styes depeding of which color theme is applied
+
   colors: {
     brand: {
       letter: "#FFFFFF",
@@ -27,35 +35,29 @@ const theme = extendTheme({
       baseStyle: {
         _hover: {
           color: "brand.600",
-        }
-      }
+        },
+      },
     },
     Box: {
       baseStyle: {
         _hover: {
           color: "brand.300",
-        }
-      }
-    }
-  },
-  sizes: {
-    sm: {
-      fontSize: "sm",
-      px: 4,
+        },
+      },
     },
-    md: {
-      fontSize: "md",
-      px: 6,
-    },
-    lg: {
-      fontSize: "lg",
-      px: 8,
+   
+    Link: {
+      baseStyle: {
+        textDecoration: "none", 
+        transition: "all 0.3s ease-in-out", 
+      },
+      _hover: {
+        backgroundColor: "brand.500", 
+        color: "white", 
+        transform: "scale(1.1)", 
+      },
     },
   },
-
-  config: {
-    initialColorMode: "dark"
-  }
 });
 
 export default theme;

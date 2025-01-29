@@ -4,7 +4,6 @@ import './i18n/i18n';
 
 import Navbar from "./components/Navbar";
 import SocialLinks from "./components/ui/SocialLinks";
-import IntroSection from "./components/Intro/IntroSection";
 
 function App() {
   return (

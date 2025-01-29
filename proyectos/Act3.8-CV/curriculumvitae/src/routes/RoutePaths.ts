@@ -1,6 +1,7 @@
 const RoutePaths = {
   Home: "/",
   About: "/about",
+  Projects: "/projects",
   Contact: "/contact",
 };
 

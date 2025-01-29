@@ -13,7 +13,7 @@ const SocialLinks: React.FC = () => {
             flexDirection="column"
             gap={4}
             position="fixed"
-            left={["10%", "2%"]}
+            left={["5%", "2%", "2%"]}
             top="50%"
             transform="translateY(-50%)"
             zIndex={3}
@@ -25,7 +25,7 @@ const SocialLinks: React.FC = () => {
                 target="_blank"
                 aria-label="GitHub"
                 icon={<FaGithub />}
-                size={["lg", "lg", "xl"]}
+                boxSize={["40px", "50px", "60px"]}
                 color={colorMode === "dark" ? "brand.100" : "black"}
                 _hover={{
                     color: "brand.50",
@@ -45,7 +45,7 @@ const SocialLinks: React.FC = () => {
                 target="_blank"
                 aria-label="LinkedIn"
                 icon={<FaLinkedin />}
-                size={["lg", "lg", "xl"]}
+                boxSize={["40px", "50px", "60px"]}
                 color={colorMode === "dark" ? "brand.100" : "black"}
 
                 _hover={{
@@ -66,7 +66,7 @@ const SocialLinks: React.FC = () => {
                 target="_blank"
                 aria-label="Gmail"
                 icon={<FaGoogle />}
-                size={["lg", "lg", "xl"]}
+                boxSize={["40px", "50px", "60px"]}
                 color={colorMode === "dark" ? "brand.100" : "black"}
                 _hover={{
                     color: "brand.300",

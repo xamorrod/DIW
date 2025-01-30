@@ -26,9 +26,9 @@ const SocialLinks: React.FC = () => {
                 aria-label="GitHub"
                 icon={<FaGithub />}
                 boxSize={["40px", "50px", "60px"]}
-                color={colorMode === "dark" ? "brand.100" : "black"}
+                color={colorMode === "dark" ? "brand.50" : "black"}
                 _hover={{
-                    color: "brand.50",
+                    color: colorMode === "dark" ? "brand.50" : "black",
                     transform: "scale(1.3)",
                     transition: "all 0.3s ease",
                 }}
@@ -37,6 +37,7 @@ const SocialLinks: React.FC = () => {
                 _active={{
                     opacity: 1,
                 }}
+
             />
 
             <IconButton
@@ -49,7 +50,7 @@ const SocialLinks: React.FC = () => {
                 color={colorMode === "dark" ? "brand.100" : "black"}
 
                 _hover={{
-                    color: "brand.50",
+                    color: colorMode === "dark" ? "brand.50" : "black",
                     transform: "scale(1.3)",
                     transition: "all 0.3s ease",
                 }}
@@ -69,7 +70,7 @@ const SocialLinks: React.FC = () => {
                 boxSize={["40px", "50px", "60px"]}
                 color={colorMode === "dark" ? "brand.100" : "black"}
                 _hover={{
-                    color: "brand.300",
+                    color: colorMode === "dark" ? "brand.50" : "black",
                     transform: "scale(1.3)",
                     transition: "all 0.3s ease",
                 }}

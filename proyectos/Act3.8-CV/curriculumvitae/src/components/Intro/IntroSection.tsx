@@ -1,5 +1,5 @@
 import { Flex, Avatar, Box, Container } from '@chakra-ui/react';
-import { easeIn, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Header from './IntroHeader';
 import React from 'react';
 import profilePicture from './../../assets/profilePictureW.webp';
@@ -11,12 +11,12 @@ const IntroSection: React.FC = () => {
     const ANIMATION_DURATION = 0.5;
     const color = 'brand.300';
     const { t } = useTranslation();
-    
+
 
     return (
         <Container maxW="5xl" p={{ base: 5, md: 12 }}>
             <Flex direction={['column', 'column', 'row']} align="center">
-               
+
                 <MotionBox
                     opacity="0"
                     initial={{
@@ -33,10 +33,10 @@ const IntroSection: React.FC = () => {
                     m="auto"
                     mb={[16, 16, 'auto']}
                 >
-                    <MotionBox whileHover={{ scale: 1.2 }} rounded="full" shadow="lg">
+                    <MotionBox whileHover={{ scale: 1.05 }} rounded="full" shadow="lg">
                         <Avatar
-                            width={{ base: "30vw", md: "20vw", lg: "20vw" }} 
-                            height={{ base: "30vw", md: "20vw", lg: "20vw" }} 
+                            width={{ base: "30vw", md: "20vw", lg: "20vw" }}
+                            height={{ base: "30vw", md: "20vw", lg: "20vw" }}
                             showBorder={true}
                             borderColor={'background.50'}
                             src={profilePicture}
@@ -44,12 +44,12 @@ const IntroSection: React.FC = () => {
                     </MotionBox>
                 </MotionBox>
 
-               
+
                 <MotionFlex
                     position="relative"
                     ml={['auto', 'auto', 16]}
                     m={['auto', 'initial']}
-                    w={['90%', '85%', '80%']} 
+                    w={['90%', '85%', '80%']}
                     maxW="800px"
                     opacity="0"
                     justifyContent="center"

@@ -3,5 +3,12 @@
   "About": "Sobre nosotros",
   "Contact": "Contacto",
   "Intro": "Soy Abraham, un apasionado desarrollador de software.",
-  "Welcome": "¡Bienvenido a mi portafolio web! Aquí podrás explorar mis proyectos más recientes y contactarme para propuestas de colaboración o trabajos."
+  "Welcome": "¡Bienvenido a mi portafolio web! Aquí podrás explorar mis proyectos más recientes y contactarme para propuestas de colaboración o trabajos.",
+  "ContactHeader": "Formulario de contacto",
+  "ContactIntro": "Nombre",
+  "ContactMail": "Email",
+  "ContactCTA": "Me pondré en contacto contigo pronto",
+  "ContactMessage": "Mensaje",
+  "ContactSendMessage": "Enviar mensaje",
+  "ContactGreeting": "Gracias por contactarme, ¡te escribiré lo antes posible!."
 }

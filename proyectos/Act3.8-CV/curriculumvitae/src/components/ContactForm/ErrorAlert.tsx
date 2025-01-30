@@ -1,13 +1,24 @@
 import { Box, chakra, Flex, Icon } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 import { BsLightningFill } from "react-icons/bs";
 
 const ErrorAlert = () => {
+    const [isVisible, setIsVisible] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsVisible(false);
+        }, 3000);
+
+        return () => clearTimeout(timer);
+    }, []);
+    if (!isVisible) return null;
     return (
         <Flex
             w="full"
             bg="#edf3f8"
             _dark={{
-                bg: "#3e3e3e",
+                bg: "transparent",
             }}
             p={50}
             alignItems="center"

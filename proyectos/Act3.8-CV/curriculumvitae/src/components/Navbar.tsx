@@ -3,18 +3,17 @@ import RoutePaths from "../routes/RoutePaths";
 import { Button, useColorMode, Box, Flex } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import LanguageSwitch from "./LanguageSwitch";
-import { useTranslation } from "react-i18next";
-import { FaHome, FaUser, FaCode, FaEnvelope } from "react-icons/fa"; // Iconos más formales
+import { FaHome, FaUser, FaCode, FaEnvelope } from "react-icons/fa"; 
 
 const Navbar: React.FC = () => {
   const { colorMode, toggleColorMode } = useColorMode();
-  const { t } = useTranslation();
 
   return (
     <Box
       boxShadow="md"
       p={3}
-      bg="rgba(39, 54, 77, 0.7)"
+      bg="#364150"
+      bgGradient={colorMode === "light" ? "linear(to-r, brand.50, brand.300)" : "linear(to-r, brand.500, brand.600)"}
       borderRadius={45}
       width="fit-content"
       maxWidth="1200px"

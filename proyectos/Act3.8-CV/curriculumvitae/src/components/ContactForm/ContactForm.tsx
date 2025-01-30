@@ -1,24 +1,30 @@
 import React, { useState } from "react";
-import { Box, Button, FormControl, FormLabel, Input, Textarea, FormHelperText, useToast } from "@chakra-ui/react";
+import { Box, Button, FormControl, FormLabel, Input, Textarea, FormHelperText } from "@chakra-ui/react";
 import emailjs from 'emailjs-com';
+import SuccessAlert from "./SuccessAlert";
+import ErrorAlert from "./ErrorAlert";
+import { useTranslation } from "react-i18next";
 
 const ContactForm: React.FC = () => {
+    const { t } = useTranslation();
+    
     const [formData, setFormData] = useState({
         from_name: "",
-        to_name: "estimado usuario",
+        to_name: "",
         message: "",
         email: "",
     });
 
     const [sending, setSending] = useState(false);
     const [sent, setSent] = useState(false);
-    const toast = useToast();
+    const [error, setError] = useState(false);
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setFormData({
             ...formData,
             [name]: value,
+            to_name: name === "from_name" ? value : formData.to_name,
         });
     };
 
@@ -37,23 +43,11 @@ const ContactForm: React.FC = () => {
                 (response) => {
                     console.log("Correo enviado exitosamente:", response);
                     setSent(true);
-                    toast({
-                        title: "Mensaje enviado",
-                        description: "Tu mensaje ha sido enviado correctamente.",
-                        status: "success",
-                        duration: 5000,
-                        isClosable: true,
-                    });
+                    setError(false);
                 },
                 (error) => {
                     console.error("Error al enviar el correo:", error);
-                    toast({
-                        title: "Error",
-                        description: "Hubo un error al enviar tu mensaje. Inténtalo de nuevo.",
-                        status: "error",
-                        duration: 5000,
-                        isClosable: true,
-                    });
+                    setError(true);
                 }
             )
             .finally(() => {
@@ -64,12 +58,13 @@ const ContactForm: React.FC = () => {
     return (
         <Box p={6} boxShadow="lg" borderRadius="lg" maxWidth="500px" mx="auto" bg="brand.50" mt={8}>
             <Box textAlign="center" mb={6}>
-                <h1 style={{ fontSize: "1.5rem", fontWeight: "600", color: "#222" }}>Formulario de Contacto</h1>
+                <h1 style={{ fontSize: "1.5rem", fontWeight: "600", color: "#222", fontFamily: "roboto, sans-serif" }}> {t('ContactHeader')}</h1>
             </Box>
+            
             {!sent ? (
                 <form onSubmit={handleSubmit}>
                     <FormControl id="from_name" mb={4} isRequired>
-                        <FormLabel color={"brand.600"}>Tu Nombre</FormLabel>
+                        <FormLabel color={"brand.600"} fontFamily="roboto, sans-serif"> {t('ContactIntro')}</FormLabel>
                         <Input
                             type="text"
                             name="from_name"
@@ -78,11 +73,12 @@ const ContactForm: React.FC = () => {
                             borderColor="brand.500"
                             _focus={{ borderColor: "brand.500" }}
                             color="brand.600"
+                            fontFamily="roboto, sans-serif"
                         />
                     </FormControl>
 
                     <FormControl id="email" mb={4} isRequired>
-                        <FormLabel color={"brand.600"}>Tu Correo Electrónico</FormLabel>
+                        <FormLabel color={"brand.600"} fontFamily="roboto, sans-serif"> {t('ContactMail')}</FormLabel>
                         <Input
                             type="email"
                             name="email"
@@ -91,13 +87,13 @@ const ContactForm: React.FC = () => {
                             borderColor="gray.300"
                             _focus={{ borderColor: "brand.500" }}
                             color="brand.600"
-
+                            fontFamily="roboto, sans-serif"
                         />
-                        <FormHelperText color={"brand.600"}>Nos pondremos en contacto contigo pronto.</FormHelperText>
+                        <FormHelperText color={"brand.600"} fontFamily="roboto, sans-serif"> {t('ContactCTA')}</FormHelperText>
                     </FormControl>
 
                     <FormControl id="message" mb={4} isRequired>
-                        <FormLabel color={"brand.600"}>Mensaje</FormLabel>
+                        <FormLabel color={"brand.600"} fontFamily="roboto, sans-serif"> {t('ContactMessage')}</FormLabel>
                         <Textarea
                             name="message"
                             value={formData.message}
@@ -106,7 +102,7 @@ const ContactForm: React.FC = () => {
                             _focus={{ borderColor: "brand.500" }}
                             resize="vertical"
                             color="brand.600"
-
+                            fontFamily="roboto, sans-serif"
                         />
                     </FormControl>
 
@@ -118,13 +114,18 @@ const ContactForm: React.FC = () => {
                         loadingText="Enviando..."
                         _hover={{ bg: "brand.300" }}
                         _active={{ bg: "brand.700" }}
+                        fontFamily="roboto, sans-serif"
                     >
-                        Enviar Mensaje
+                        {t('ContactSendMessage')}
                     </Button>
+
+                    {error && <ErrorAlert />}
+                    {sent && !error && <SuccessAlert />}
                 </form>
+                
             ) : (
-                <Box textAlign="center" mt={4}>
-                    <p>¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.</p>
+                <Box textAlign="center" mt={4} color={"brand.600"} fontFamily="roboto, sans-serif">
+                        <p> {t('ContactGreeting')}</p>
                 </Box>
             )}
         </Box>

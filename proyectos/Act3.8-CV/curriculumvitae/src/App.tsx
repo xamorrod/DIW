@@ -3,7 +3,7 @@ import AppRoutes from "./routes/AppRoutes";
 import './i18n/i18n';
 
 import Navbar from "./components/Navbar";
-import SocialLinks from "./components/ui/SocialLinks";
+import SocialLinks from "./components/SocialLinks";
 
 function App() {
   return (

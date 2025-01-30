@@ -1,7 +1,18 @@
 import { Box, chakra, Flex, Icon } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 import { IoMdCheckmarkCircle } from "react-icons/io";
 
 const SuccesAlert = () => {
+    const [isVisible, setIsVisible] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsVisible(false);
+        }, 3000);
+
+        return () => clearTimeout(timer);
+    }, []);
+    if (!isVisible) return null;
     return (
         <Flex
             w="full"

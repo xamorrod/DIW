@@ -5,7 +5,7 @@ import { useColorMode } from "@chakra-ui/react";
 
 // Component that shows the social links and give easy access to them
 const SocialLinks: React.FC = () => {
-    const { colorMode, toggleColorMode } = useColorMode();
+    const { colorMode } = useColorMode();
 
     return (
         <Box

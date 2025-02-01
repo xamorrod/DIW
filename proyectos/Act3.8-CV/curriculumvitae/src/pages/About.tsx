@@ -1,5 +1,5 @@
-import IntroSection from "../components/Intro/IntroSection";
-import TimeLine from "../components/TimeLine";
+import IntroSection from "../components/AboutComponents/Intro/IntroSection";
+import TimeLine from "../components/AboutComponents/TimeLine";
 
 const About: React.FC = () => {
   return (

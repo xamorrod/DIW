@@ -3,7 +3,7 @@ import RoutePaths from "../routes/RoutePaths";
 import { Button, useColorMode, Box, Flex } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import LanguageSwitch from "./LanguageSwitch";
-import { FaHome, FaUser, FaCode, FaEnvelope } from "react-icons/fa"; 
+import { FaHome, FaUser, FaCode, FaEnvelope } from "react-icons/fa";
 
 const Navbar: React.FC = () => {
   const { colorMode, toggleColorMode } = useColorMode();

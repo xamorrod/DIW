@@ -1,13 +1,12 @@
 import React from "react";
 import { Box, Center, Text, useColorModeValue } from "@chakra-ui/react";
-import { FaPlane, FaAdjust, FaCode, FaGithub, FaStreetView, FaWeebly, FaInternetExplorer, FaSearch } from "react-icons/fa";
+import { FaPlane, FaCode, FaSearch, FaTshirt, FaUserGraduate } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
 
 const TimeLine: React.FC = () => {
   const { t } = useTranslation();
 
   // Colores para modo claro y oscuro basados en tu tema
-  const bgColor = useColorModeValue("brand.50", "brand.600"); 
   const textColor = useColorModeValue("brand.letter", "white"); 
   const titleColor = useColorModeValue("brand.600", "brand.100");
   const iconBgColor = useColorModeValue("brand.100", "brand.500"); 
@@ -18,7 +17,7 @@ const TimeLine: React.FC = () => {
 
   const timelineItems = [
     {
-      icon: <FaAdjust size={16} />,
+      icon: <FaUserGraduate size={16} />,
       title: t('TimeLineIntro'),
       date: t('TimeLineDate'),
       description: t('TimeLineIntroDescription'),
@@ -34,17 +33,7 @@ const TimeLine: React.FC = () => {
     },
     
     {
-      icon: (
-        <svg
-          className="w-4 h-4"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-        >
-          <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
-        </svg>
-      ),
+      icon: <FaTshirt/>,
       title: t('TimeLineProject3'),
       date: t('TimeLineDate3'),
       description: t('TimeLineProject3Description'),
@@ -68,7 +57,7 @@ const TimeLine: React.FC = () => {
         borderRadius="xl"
         boxShadow="lg"
         overflow={["auto", "auto", "hidden"]}
-        bg={bgColor}
+        bg={"tramsparent"}
       >
         <Text fontSize="3xl" fontWeight="bold" color={textColor}>
           <ol className="relative border-s border-gray-200 dark:border-gray-700 max-w-4xl mx-auto">

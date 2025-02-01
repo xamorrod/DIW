@@ -2,7 +2,7 @@ import { Flex, Avatar, Box, Container } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import Header from './IntroHeader';
 import React from 'react';
-import profilePicture from './../../assets/profilePictureW.webp';
+import profilePicture from '../../../assets/profilePictureW.webp';
 import { useTranslation } from 'react-i18next';
 
 const IntroSection: React.FC = () => {

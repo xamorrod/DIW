@@ -14,7 +14,7 @@ const IntroSection: React.FC = () => {
 
 
     return (
-        <Container maxW="5xl" p={{ base: 5, md: 12 }}>
+        <Container maxW="4xl" p={{ base: 5, md: 12 }}>
             <Flex direction={['column', 'column', 'row']} align="center">
 
                 <MotionBox

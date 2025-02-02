@@ -35,5 +35,14 @@
   "Project3Description": "Project created to manage airport flights in a CRUD form connected to the backend through JDBC and using JSwing to create a graphical interface in the form of a desktop application.",
   "Project4Title": "QaRdrobe",
   "Project4Description": "Landing page of a tool to revolutionize the textile industry and the way clothing is treated in the world. With the help of technology and artificial intelligence, QaRdrobe seeks to change the way people buy, sell, and use clothing.",
-  "ProjectButton": "¡Visítalo!"
+  "ProjectButton": "¡Visítalo!",
+  "HeroSlogan": "If you can imagine it, you can program it",
+  "HeroTitle": "Full Stack Developer passionate about creating innovative and scalable solutions. Welcome to my portfolio!",
+  "HeroDownload": "Download CV",
+  "HeroStart": "Let's get started!",
+  "AcademicTitle": "Academic Background",
+  "AcademicGrade": "Web Application Development Higher Technician",
+  "AcademicLocation": "Ies Hermanos Machado",
+  "AcademicIdiom": "C1 Advanced Cambridge",
+  "AcademicCourses": "Relevant Courses"
 }

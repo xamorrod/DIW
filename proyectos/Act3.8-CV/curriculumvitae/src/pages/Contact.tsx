@@ -1,10 +1,8 @@
-import { Container, SimpleGrid, Box, Heading, useColorModeValue } from "@chakra-ui/react";
+import { Container, SimpleGrid, Box } from "@chakra-ui/react";
 import ContactForm from "../components/ContactComponents/ContactForm/ContactForm";
 import ContactInfo from "../components/ContactComponents/ContactInfo";
-import { useTranslation } from "react-i18next";
 
 const Contact: React.FC = () => {
-  const { t } = useTranslation();
 
   return (
     <Container maxW="container.xl" py={16}>

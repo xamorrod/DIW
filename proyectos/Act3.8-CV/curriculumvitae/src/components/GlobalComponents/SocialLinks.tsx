@@ -26,17 +26,17 @@ const SocialLinks: React.FC = () => {
                 aria-label="GitHub"
                 icon={<FaGithub />}
                 boxSize={["40px", "50px", "60px"]}
-                color={colorMode === "dark" ? "brand.50" : "black"}
+                color={colorMode === "dark" ? "brand.300" : "black"}
                 _hover={{
                     color: colorMode === "dark" ? "brand.50" : "black",
                     transform: "scale(1.3)",
                     transition: "all 0.3s ease",
                 }}
                 isRound
-                opacity={0.7}
                 _active={{
                     opacity: 1,
                 }}
+                bg={colorMode === "dark" ? "brand.100" : "brand.100"}
 
             />
 
@@ -47,7 +47,8 @@ const SocialLinks: React.FC = () => {
                 aria-label="LinkedIn"
                 icon={<FaLinkedin />}
                 boxSize={["40px", "50px", "60px"]}
-                color={colorMode === "dark" ? "brand.100" : "black"}
+                color={colorMode === "dark" ? "brand.300" : "black"}
+
 
                 _hover={{
                     color: colorMode === "dark" ? "brand.50" : "black",
@@ -55,10 +56,11 @@ const SocialLinks: React.FC = () => {
                     transition: "all 0.3s ease",
                 }}
                 isRound
-                opacity={0.7}
                 _active={{
                     opacity: 1,
                 }}
+                bg={colorMode === "dark" ? "brand.100" : "brand.100"}
+
             />
 
             <IconButton
@@ -68,17 +70,19 @@ const SocialLinks: React.FC = () => {
                 aria-label="Gmail"
                 icon={<FaGoogle />}
                 boxSize={["40px", "50px", "60px"]}
-                color={colorMode === "dark" ? "brand.100" : "black"}
+                color={colorMode === "dark" ? "brand.300" : "black"}
+
                 _hover={{
                     color: colorMode === "dark" ? "brand.50" : "black",
                     transform: "scale(1.3)",
                     transition: "all 0.3s ease",
                 }}
                 isRound
-                opacity={0.7}
                 _active={{
                     opacity: 1,
                 }}
+                bg={colorMode === "dark" ? "brand.100" : "brand.100"}
+
             />
         </Box>
     );

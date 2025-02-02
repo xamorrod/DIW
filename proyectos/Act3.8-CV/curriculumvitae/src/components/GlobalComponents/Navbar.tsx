@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import RoutePaths from "../routes/RoutePaths";
+import RoutePaths from "../../routes/RoutePaths";
 import { Button, useColorMode, Box, Flex } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import LanguageSwitch from "./LanguageSwitch";
